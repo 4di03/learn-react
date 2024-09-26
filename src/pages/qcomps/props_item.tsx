@@ -1,19 +1,12 @@
 import { ItemProps } from "@/types/item";
 
+
 function Item({ name, isPacked } : ItemProps) {
-  if (!isPacked){
   return (
     <li className="item">
-      {name}
+    {!isPacked ? <span>{name}</span> : <del>{name}</del>}
     </li>
   );
-} else{
-  return (
-  <li className="item">
-  <del>{name}</del>
-</li>
-  );
-}
 }
 
 export default function PackingList() {
