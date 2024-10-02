@@ -5,7 +5,8 @@ export default function Gallery() {
   const [index, setIndex] = useState(0);
 
   function handleClick() {
-    setIndex(index + 1);
+
+    setIndex((index + 1)%sculptureList.length);
   }
 
   let sculpture = sculptureList[index];
